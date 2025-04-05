@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Realizar Pedido</title>
+    </head>
+    <div>
+        <h1>Realizar Pedido</h1>
+        <form method="POST" action="/pedido/guardar">
+            <label>Nombre del cliente:</label>
+            <input type="text" name="nombre"/><br/>
+            <label>Numero de mesa:</label>
+            <input type="number" name="numeroMesa"/><br/>
+            <h2>Productos:</h2>
+            <input type="checkbox" name="cafe" id="cafe" value="cafe">
+            <label for="cafe">Cafe</label>
+            <input type="checkbox" name="te" id="te" value="te">
+            <label for="te">Te</label>
+            <input type="checkbox" name="postre" id="postre" value="postre">
+            <label for="postre">Postre</label>
+            <h2>Personalización</h2>
+            <select name="tamanio">
+                <option value="Pequenio">Pequeño</option>
+                <option value="Mediano">Mediano</option>
+                <option value="Grande">Grande</option>
+            </select><br/>
+            <input type="number" name="cantidad"><br/>
+            <h2>Opciones Adicionales:</h2>
+            <input type="checkbox" name="lecheVegetal" id="lecheVegetal" value="lecheVegetal">
+            <label for="lecheVegetal">Leche Vegetal</label>
+            <input type="checkbox" name="sinAzucar" id="sinAzucar" value="sinAzucar">
+            <label for="sinAzucar">Sin azúcar</label>
+            <input type="submit" value="Confirmar Pedido"><br/>
+        </form>
+    </div>
+
+</html>
